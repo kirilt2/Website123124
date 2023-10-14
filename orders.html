@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/orders.css">
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1137021786597363734/f624c4584a46e5d3c63cccf25dabd123.png?size=4096"><!-- Link to the new CSS file -->
+</head>
+<body>
+  <div class="container">
+    <h2>Заказы- Clan</h2>
+    <ul>
+      {% for order in orders %}
+        <li class="order-item"> <!-- Add a class for styling -->
+          <strong>Ник на ReallyWorld:</strong> {{ order.nickname }}<br>
+          <strong>Донат на ReallyWorld:</strong> {{ order.donate }}<br>
+          <strong>Ваши чит-клиенты:</strong> {{ order['cheat-clients'] }}<br>
+          <strong>Сколько играете с чит-клиентами:</strong> {{ order['cheat-duration'] }}<br>
+          <strong>Сколько можете играть в день:</strong> {{ order['play-hours'] }}<br>
+          <strong>Сколько тебе лет:</strong> {{ order['age'] }}<br>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

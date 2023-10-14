@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1137021786597363734/f624c4584a46e5d3c63cccf25dabd123.png?size=4096">
+    <title>Form Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .message-container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #4CAF50;
+        }
+
+        .button {
+            background-color: #0000FF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <h1>Ваша заявка успешно отправлена!</h1>
+        <p>Благодарим вас за отправку запроса.</p>
+        <p>Ответь придёт через 24 часа..</p>
+        <p>Если вы написали правильно ваше Discord..</p>
+        <button id="submit-button" class="button">Закрывать</button>
+    </div>
+
+    <script>
+        document.getElementById("submit-button").addEventListener("click", function() {
+            window.location.href = 'send.html';
+        });
+    </script>
+</body>
+</html>
