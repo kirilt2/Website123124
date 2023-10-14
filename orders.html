@@ -2,16 +2,84 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/static/style.css">
-  <link rel="stylesheet" type="text/css" href="/static/orders.css">
-  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1137021786597363734/f624c4584a46e5d3c63cccf25dabd123.png?size=4096"><!-- Link to the new CSS file -->
+  <style>
+    /* CSS code here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+      margin: 20px auto;
+      height: 70vh;
+      overflow-y: auto;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    li {
+      background-color: #f2f2f2;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 10px);
+      margin-right: 20px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    li:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    a {
+      display: inline-block;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1137021786597363734/f624c4584a46e5d3c63cccf25dabd123.png?size=4096">
+  <title>Заказы - Clan</title>
 </head>
 <body>
   <div class="container">
-    <h2>Заказы- Clan</h2>
+    <h2>Заказы - Clan</h2>
     <ul>
-      {% for order in orders %}
-        <li class="order-item"> <!-- Add a class for styling -->
+      <!-- {% for order in orders %} (Assuming this is a template placeholder) -->
+        <li class="order-item">
           <strong>Ник на ReallyWorld:</strong> {{ order.nickname }}<br>
           <strong>Донат на ReallyWorld:</strong> {{ order.donate }}<br>
           <strong>Ваши чит-клиенты:</strong> {{ order['cheat-clients'] }}<br>
@@ -19,7 +87,7 @@
           <strong>Сколько можете играть в день:</strong> {{ order['play-hours'] }}<br>
           <strong>Сколько тебе лет:</strong> {{ order['age'] }}<br>
         </li>
-      {% endfor %}
+      <!-- {% endfor %} -->
     </ul>
   </div>
 </body>
