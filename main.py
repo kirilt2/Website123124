@@ -29,6 +29,7 @@ def index():
         orders.append(data)
         return render_template('send.html')
     return render_template('index.html')
+    return "Form submitted successfully."
 
 @app.route('/orders')
 def view_orders():
