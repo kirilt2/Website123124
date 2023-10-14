@@ -2,43 +2,107 @@
 <html>
 <head>
   <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <style>
+    /* Reset default browser styles */
+    body, h2, form {
+        margin: 0;
+        padding: 0;
+    }
 
+    /* Center the form on the page */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
 
+    /* Style the form container */
+    .form-container {
+        background: #f2f2f2;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+    }
 
+    /* Style the form heading */
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Style labels for form inputs */
+    label {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+        color: #555;
+    }
+
+    /* Style form inputs */
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Style the submit button */
+    #submit-button {
+        background: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    /* Style the footer note */
+    label[for="age"] {
+        font-size: 12px;
+        color: #777;
+        margin-top: 20px;
+    }
+  </style>
   <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1137021786597363734/f624c4584a46e5d3c63cccf25dabd123.png?size=4096">
+  <title>Заявка на клан Minecraft</title>
 </head>
 <body>
   <div class="container">
     <h2>Заявка на клан Minecraft</h2>
-<form id="clan-application" method="post" action="/">
-    <label for="nickname">1. Ник на ReallyWorld:</label>
-    <input type="text" id="nickname" name="nickname" required>
+    <form id="clan-application" method="post" action="/">
+      <label for="nickname">1. Ник на ReallyWorld:</label>
+      <input type="text" id="nickname" name="nickname" required>
 
-    <label for="Discord">2. Ник на Discord (Kiril#1231):</label>
-    <input type="text" id="Discord" name="Discord">
+      <label for="Discord">2. Ник на Discord (Kiril#1231):</label>
+      <input type="text" id="Discord" name="Discord">
 
-    <label for="donate">3. Донат на ReallyWorld:</label>
-    <input type="text" id="donate" name="donate">
+      <label for="donate">3. Донат на ReallyWorld:</label>
+      <input type="text" id="donate" name="donate">
 
-    <label for="cheat-clients">4. Ваши чит-клиенты:</label>
-    <input type="text" id="cheat-clients" name="cheat-clients">
+      <label for="cheat-clients">4. Ваши чит-клиенты:</label>
+      <input type="text" id="cheat-clients" name="cheat-clients">
 
-    <label for="cheat-duration">5. Сколько играете с чит-клиентами:</label>
-    <input type="text" id="cheat-duration" name="cheat-duration">
+      <label for="cheat-duration">5. Сколько играете с чит-клиентами:</label>
+      <input type="text" id="cheat-duration" name="cheat-duration">
 
-    <label for="play-hours">6. Сколько можете играть в день:</label>
-    <input type="text" id="play-hours" name="play-hours">
+      <label for="play-hours">6. Сколько можете играть в день:</label>
+      <input type="text" id="play-hours" name="play-hours">
 
-    <label for="age">7. Сколько тебе лет:</label>
-    <input type="text" id="age" name="age">
+      <label for="age">7. Сколько тебе лет:</label>
+      <input type="text" id="age" name="age">
 
-    <button type="submit" id="submit-button">Отправить</button>
-    <h2>Код написан Кирилом kiril7078</h2>
-
-</form>
-
-
+      <button type="submit" id="submit-button">Отправить</button>
+      <h2>Код написан Кирилом kiril7078</h2>
     </form>
   </div>
 </body>
